@@ -3,6 +3,9 @@ ASLConnect is a C++ application that promotes inclusive communication by helping
 
 
 ### TEAM MEMBERS
-1.Srishti Dhasmana (Team Leader)
-2.Ishita Bijalwan
+1.Srishti Dhasmana (Team Leader) 
+
+2.Ishita Bijalwan 
+
 3.Nandini Rana
+
