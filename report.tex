@@ -1,0 +1,358 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,left=2.0cm,right=2.0cm,top=1.55cm,bottom=1.55cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{seqsplit}
+\usepackage{needspace}
+
+% -------------------------------------------------
+% COLOURS
+% -------------------------------------------------
+\definecolor{TitleBlue}{RGB}{61,103,154}
+
+% -------------------------------------------------
+% GENERAL SETTINGS
+% -------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% The supplied document uses a clean sans-serif heading style
+% and italic serif-style explanatory text.
+\newcommand{\blueheading}[1]{%
+    {\sffamily\color{TitleBlue}\fontsize{15}{18}\selectfont #1}%
+}
+
+\newcommand{\bluebigheading}[1]{%
+    {\sffamily\bfseries\color{TitleBlue}\fontsize{16}{19}\selectfont #1}%
+}
+
+\newcommand{\instruction}[1]{%
+    {\itshape\fontsize{10.5}{12.5}\selectfont #1}%
+}
+
+\newcommand{\answerbox}[2][3.0cm]{%
+    \vspace{2pt}
+    \noindent
+    \fbox{%
+        \begin{minipage}[t][#1][t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \vspace{1mm}
+            \itshape #2
+        \end{minipage}
+    }
+}
+
+% -------------------------------------------------
+% HEADER / FOOTER
+% -------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancyhead[L]{%
+    \sffamily\bfseries\itshape\fontsize{10.5}{12}\selectfont
+    DSCPP-III-2026-T059.
+}
+\fancyhead[R]{%
+    \sffamily\bfseries\fontsize{10.5}{12}\selectfont
+    PROJECT PROPOSAL
+}
+\fancyfoot[R]{%
+    \itshape\fontsize{10}{12}\selectfont
+    Page \thepage
+}
+\setlength{\headheight}{14pt}
+\setlength{\headsep}{23pt}
+\setlength{\footskip}{24pt}
+
+% -------------------------------------------------
+% PAGE 1
+% -------------------------------------------------
+\begin{document}
+
+\vspace*{4mm}
+
+\bluebigheading{PROJECT AND TEAM INFORMATION}
+
+\vspace{13mm}
+
+\blueheading{Project Title}
+
+\vspace{1mm}
+
+\instruction{(Try to choose a catchy title. Max 20 words).}
+
+\answerbox[1.0cm]{ASLConnect: Inclusive communication}
+
+\vspace{13mm}
+
+\blueheading{Student / Team Information}
+
+\vspace{2mm}
+
+% Team information table
+% Compact 3-member layout
+\noindent
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{0.69\textwidth}|>{\RaggedRight\arraybackslash}X|}
+\hline
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{Team Name:}\\[-1mm]
+\textit{Team \#}
+\vspace{1.5mm}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{Signova}
+\vspace{1.5mm}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][4.6cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 1 (Team Lead)}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][4.6cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Dhasmana, Srishti -- 2510010598}\\
+\textit{\seqsplit{dhasmanasrishti715@gmail.com}}
+
+\vspace{2mm}
+\centering
+\includegraphics[width=2.0cm,height=2.4cm,keepaspectratio]{srishti.jpeg}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][4.6cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 2}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][4.6cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Bijalwan, Ishita -- 2510380152}\\
+\textit{\seqsplit{ishitabijalwan.ib@gmail.com}}
+
+\vspace{2mm}
+\centering
+\includegraphics[width=2.0cm,height=2.4cm,keepaspectratio]{ishita.jpeg}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][4.4cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 3}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][4.4cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Rana, Nandini -- 2510370024}\\
+\textit{\seqsplit{nr.nandini21@gmail.com}}
+
+\vspace{2mm}
+\centering
+\includegraphics[width=2.0cm,height=2.2cm,keepaspectratio]{nandini.jpeg}
+\end{minipage}
+\\
+\hline
+\end{tabularx}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 2
+% -------------------------------------------------
+
+\bluebigheading{PROPOSAL DESCRIPTION (10 pts)}
+
+\vspace{12mm}
+
+\needspace{10cm}
+\blueheading{Motivation (1 pt)}
+
+\vspace{3mm}
+
+\instruction{(Describe the problem you want to solve and why it is important. Max 300 words).}
+
+\answerbox[7.0cm]{While communication is often considered mundane, there is one form of communication that remains to be a consistent issue for those who speak American Sign Language (ASL). Daily tasks like having a conversation with a store owner, asking questions from a teacher or taking part in any conversation where the person does not know ASL create difficulties for the individual.
+
+\vspace{2mm}
+In consequence, this kind of communication barrier denies people of education, socializing and learning information which is easily accessible for other people. This is among the reasons why our team decided to start working on ASLConnect. We aim at creating an online resource, which would help beginners feel more confident about learning ASL, by allowing them to find signs, understand and use them gradually.
+
+\vspace{2mm}
+Furthermore, as this project became a part of Data Structures and Algorithms (DSA), we were able to put theoretical knowledge into practice and learn more about the practical aspects of software development.}
+
+\vspace{8mm}
+
+\needspace{7cm}
+\blueheading{State of the Art / Current solution (1 pt)}
+
+\vspace{3mm}
+
+\instruction{(Describe how the problem is solved today (if it is). Max 200 words).}
+
+\answerbox[4.75cm]{The current method of communication between ASL speakers and non-signers is through human interpreters, ASL learning apps, sign language dictionaries in video form, and AI/computer vision recognition systems. Human interpreters help translate the message in real time, but they are expensive and hard to find. ASL learning apps and dictionaries assist users in learning or looking up signs, but they lack real-time interaction. ASL recognition systems identify signs using cameras but suffer from issues such as continuous sign detection, small vocabularies, and dependence on internet connectivity or special devices. These drawbacks hinder ASL users from easy access to communication. The proposed ASLConnect uses Data Structures and Algorithms (DSA) techniques by making use of efficient data structures to manage sign language information.}
+
+\vspace{8mm}
+
+\needspace{19cm}
+\blueheading{Project Goals and Milestones (2 pts)}
+
+\vspace{1mm}
+
+\instruction{(Describe the project general goals. Include initial milestones as well any other milestones. Max 300 words).}
+
+\answerbox[17cm]{The main aim of ASLConnect is to develop an interactive, accessible platform which allows communication between speakers of American Sign Language and those who do not know it, built using core concepts of Data Structures and Algorithms in C++. This project is meant to demonstrate how well-organized data storage and search methods can be applied to solve practical problems related to accessibility.
+
+\vspace{3mm}
+To achieve this purpose, the project focuses on the following key functionalities: storing and structuring ASL signs in a proper way; enabling quick search of signs by word and category; translating from signs to words and vice versa for educational purposes; allowing users to browse signs by category (alphabets, numbers, greetings, phrases); and providing a convenient command-line/console interface to practice ASL vocabulary.
+
+\vspace{3mm}
+The foundation of the ASLConnect project lies in applying core Data Structures and Algorithms principles. Arrays and vectors will store information about each sign, such as its word, description and category. Hash tables will enable fast, near-constant-time lookup of signs by keyword, improving the efficiency of search operations. Linked lists will manage the category list dynamically, while stacks and queues will support features such as recently viewed signs and learning modules. Tree structures will organize signs hierarchically by category, and sorting algorithms will order the results of search operations.
+
+\vspace{3mm}
+\textbf{Planned Milestones}
+\vspace{0.5mm}
+\begin{itemize}[itemsep=1.8mm, topsep=1mm, leftmargin=6mm]
+    \item Requirement analysis and problem definition
+    \item Data collection and structuring of the ASL sign vocabulary
+    \item Implementation of core data structures
+    \item Implementation of searching and sorting operations
+    \item Implementation of category-based browsing and learning modules
+    \item Integration of all modules into a single system
+    \item Testing for correctness, efficiency and usability
+    \item Evaluation of the performance of selected data structures and algorithms
+    \item Documentation and project presentation
+\end{itemize}
+}
+
+\vspace{8mm}
+
+\needspace{17.5cm}
+\blueheading{Project Approach (3 pts)}
+
+\vspace{3mm}
+
+\instruction{(Describe how you plan to articulate and design a solution. Including platforms and technologies that you will use. Max}
+
+\instruction{300 words).}
+
+\answerbox[15.05cm]{\begin{enumerate}[itemsep=3.5mm, topsep=1mm, leftmargin=6mm]
+    \item \textbf{Collection and Organization of ASL Data} -- Build a dataset of ASL signs and terms along with the meaning and gesture description of each entry.
+    \item \textbf{Data Structure Design} -- Represent the dataset using vectors, hash tables for quick search, linked lists to group entries by category, and trees for ordered/prefix-based searching. These structures will be designed using object-oriented programming features such as the \texttt{Sign} and \texttt{Dictionary} classes.
+    \item \textbf{Sign Search Using Hashing} -- Use hashing for exact search, and tree or binary search techniques for prefix searches, applying sorting algorithms wherever ordered searching is required.
+    \item \textbf{Sign Classification and Navigation} -- Group ASL signs by category (numbers, emotions, actions, etc.) using linked lists or trees.
+    \item \textbf{Learning Module} -- Add a learning module using flashcards or quizzes and track user progress using a queue or stack.
+    \item \textbf{Communication Module} -- Build a word-to-sign and sign-to-word translation process using a hash table/dictionary.
+    \item \textbf{Module Integration and Testing} -- Integrate all modules into a single C++ console program and test it with various inputs, especially edge cases.
+    \item \textbf{Analysis of Time Complexity and Performance} -- Analyze the time complexity, memory usage and efficiency of search and sort operations.
+\end{enumerate}}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 3
+% -------------------------------------------------
+
+\blueheading{System Architecture (High Level Diagram)(2 pts)}
+
+\vspace{10mm}
+
+\instruction{(Provide an overview of the system, identifying its main components and interfaces in the form of a diagram using a tool}
+
+\instruction{}
+
+\answerbox[15.0cm]{%
+\centering
+\includegraphics[width=\dimexpr\textwidth-3\fboxsep-3\fboxrule\relax,height=12.5cm,keepaspectratio]{HMDpbl.jpeg}
+}
+
+
+
+
+\vspace{150mm}
+
+\blueheading{Project Outcome / Deliverables (1 pts)}
+
+\vspace{1mm}
+
+\instruction{(Describe what are the outcomes / deliverables of the project. Max 200 words).}
+
+\answerbox[1cm]{One of the main goals of this project is the creation of a website, \textit{ASLConnect}, which will use basic data structures and algorithms to organize, search, retrieve, and manage ASL-related data quickly. The developed program will have the following capabilities:
+
+\vspace{1.5mm}
+\begin{itemize}[itemsep=1mm, topsep=1.5mm, leftmargin=6mm]
+    \item Building an organized ASL sign database including frequently used signs, lexical terms, their meanings and classifications.
+    \item Storing and retrieving sign data using data structures such as arrays/vectors, linked lists, trees or hash tables, chosen based on practical applicability.
+    \item Performing quick searches by applying suitable searching and sorting algorithms to find a sign or word.
+    \item Creating a classification-based learning system to allow users to browse and learn ASL signs by category.
+    \item Implementing a word-to-sign and sign-to-word information workflow based on the existing dataset.
+    \item Providing a simple, user-friendly C++ command-line interface for interacting with the system.
+    \item Conducting testing and performance analysis to evaluate time complexity, memory usage and search speed.
+    \item Delivering documentation and a final demo version of the ASLConnect system.
+    \item The final output will be a well-tested system that organizes and retrieves ASL information effectively. Overall, the main goal of this project is to apply core data structures, algorithms and C++/OOP concepts to a real-world issue, thereby enabling more inclusive communication between ASL users and non-ASL users.
+\end{itemize}
+
+\vspace{1.5mm}
+}
+
+\vspace{12mm}
+
+\blueheading{Assumptions}
+
+\vspace{6mm}
+
+\instruction{( Describe the assumptions ( if any ) you are making to solve the problem. Max 100 words )}
+
+\answerbox[7.0cm]{%
+1. The project utilizes an already existing dataset consisting of frequently used signs and meanings in the American Sign Language. \vspace{3mm}
+
+2. The ASL data has to be kept in a certain structure which can be implemented using adequate C++ data structures. \vspace{3mm}
+
+3. The project will be focused on helping users learn basic ASL. \vspace{3mm}
+
+4. Adequate data structures and algorithms, such as arrays, linked lists, hash tables, and trees, will be chosen based on their applicability for data storage and search. \vspace{3mm}
+
+5. The performance analysis will concentrate on the speed of data search and time complexity.
+}
+
+
+
+\vspace{98mm}
+
+\blueheading{References}
+
+\vspace{5mm}
+
+\instruction{(Provide a list of resources or references you utilised for the completion of this deliverable. You may provide links).}
+
+\answerbox[4.0cm]{1.	Lifeprint (ASL University) – Dr. William Vicars – for ASL vocabulary, signs, and grammar reference (lifeprint.com).
+
+	2.	National Association of the Deaf (NAD) – for information on ASL and communication accessibility (nad.org).
+    
+	3.	GeeksforGeeks – for concepts of arrays, linked lists, hash tables, trees, searching, and sorting.
+
+
+	4.	cplusplus.com / W3Schools – for C++ syntax, STL, and object-oriented programming concepts.
+    
+	5. World Health Organization (WHO) – “Deafness and Hearing Loss” fact sheet – for context on communication accessibility needs.}
+
+\end{document}12
